@@ -1,0 +1,4 @@
+D:\test\UnitTestLearn\UnitTestLearn\bin\Debug\UnitTestLearn.dll
+D:\test\UnitTestLearn\UnitTestLearn\bin\Debug\UnitTestLearn.pdb
+D:\test\UnitTestLearn\UnitTestLearn\obj\Debug\UnitTestLearn.dll
+D:\test\UnitTestLearn\UnitTestLearn\obj\Debug\UnitTestLearn.pdb

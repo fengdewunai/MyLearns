@@ -1,0 +1,16 @@
+D:\test\WCFLearn\WCFLearn\bin\Debug\WCFLearn.exe.config
+D:\test\WCFLearn\WCFLearn\bin\Debug\WCFLearn.exe
+D:\test\WCFLearn\WCFLearn\bin\Debug\WCFLearn.pdb
+D:\test\WCFLearn\WCFLearn\obj\Debug\WCFLearn.csprojResolveAssemblyReference.cache
+D:\test\WCFLearn\WCFLearn\obj\Debug\WCFLearn.Properties.Resources.resources
+D:\test\WCFLearn\WCFLearn\obj\Debug\WCFLearn.csproj.GenerateResource.Cache
+D:\test\WCFLearn\WCFLearn\obj\Debug\WCFLearn.exe
+D:\test\WCFLearn\WCFLearn\obj\Debug\WCFLearn.pdb
+D:\MyLearns\trunk\WCFLearn\WCFLearn\bin\Debug\WCFLearn.exe.config
+D:\MyLearns\trunk\WCFLearn\WCFLearn\obj\Debug\WCFLearn.exe
+D:\MyLearns\trunk\WCFLearn\WCFLearn\obj\Debug\WCFLearn.pdb
+D:\MyLearns\trunk\WCFLearn\WCFLearn\bin\Debug\WCFLearn.exe
+D:\MyLearns\trunk\WCFLearn\WCFLearn\bin\Debug\WCFLearn.pdb
+D:\MyLearns\trunk\WCFLearn\WCFLearn\obj\Debug\WCFLearn.csprojResolveAssemblyReference.cache
+D:\MyLearns\trunk\WCFLearn\WCFLearn\obj\Debug\WCFLearn.Properties.Resources.resources
+D:\MyLearns\trunk\WCFLearn\WCFLearn\obj\Debug\WCFLearn.csproj.GenerateResource.Cache

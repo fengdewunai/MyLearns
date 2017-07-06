@@ -1,0 +1,17 @@
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCopLearn.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCopLearn.pdb
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCop.CSharp.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCop.dll
+D:\test\StyleCopLearn\StyleCopLearn\obj\Debug\StyleCopLearn.dll
+D:\test\StyleCopLearn\StyleCopLearn\obj\Debug\StyleCopLearn.pdb
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCop.CSharp.Rules.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\de-DE\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\en-GB\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\es-MX\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\fr-FR\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\pl-PL\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\pt-BR\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\ru-RU\StyleCop.CSharp.Rules.resources.dll
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCopLearn.dll.CodeAnalysisLog.xml
+D:\test\StyleCopLearn\StyleCopLearn\bin\Debug\StyleCopLearn.dll.lastcodeanalysissucceeded
+D:\test\StyleCopLearn\StyleCopLearn\obj\Debug\StyleCopLearn.csprojResolveAssemblyReference.cache

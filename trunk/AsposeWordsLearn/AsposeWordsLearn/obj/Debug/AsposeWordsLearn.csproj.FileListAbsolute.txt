@@ -1,0 +1,12 @@
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\AsposeWordsLearn.exe.config
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\AsposeWordsLearn.exe
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\AsposeWordsLearn.pdb
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Aspose.Words.dll
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\obj\Debug\AsposeWordsLearn.exe
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\obj\Debug\AsposeWordsLearn.pdb
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Template\BuildTableTemplate.docx
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Template\template.docx
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\obj\Debug\AsposeWordsLearn.csprojResolveAssemblyReference.cache
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Template\BookMarkTemplate.docx
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Template\InsertContent.docx
+D:\MyLearns\trunk\AsposeWordsLearn\AsposeWordsLearn\bin\Debug\Template\person.jpg

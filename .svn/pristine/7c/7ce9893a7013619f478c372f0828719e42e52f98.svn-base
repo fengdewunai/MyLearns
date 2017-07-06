@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="C32F73F1-4824-4C37-A02A-FCFFD54EE209" ModuleId="Consumer" />
+  <Module PersistentId="7EE4006C-77DC-4576-B5A5-058BF02D2752" ModuleId="MQHelper" />
+  <Module PersistentId="440CE4E1-4B26-4E51-BDF4-DDD9F19A05A0" ModuleId="Producer" />
+</Modules>

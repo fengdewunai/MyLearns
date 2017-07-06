@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key ="baseurl" value="net.tcp://localhost:1920/HomeService"/>
+    <add key ="endpoindurl" value="net.tcp://localhost:1920/HomeService"/>
+    <add key ="listenUri" value="net.tcp://localhost:1930/HomeService"/>
+  </appSettings>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <system.serviceModel>
+    <bindings>
+      <netTcpBinding>
+        <binding name="IHomeServiceBinding" />
+      </netTcpBinding>
+    </bindings>
+    
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="mexbehavior">
+          <serviceMetadata httpGetEnabled="false" />
+          <serviceDebug includeExceptionDetailInFaults="true" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+
+    <services>
+      <service name="WCFLearn.HomeService" behaviorConfiguration="mexbehavior">
+        <endpoint address="net.tcp://127.0.0.1:29200/HomeService" binding="netTcpBinding" 
+                  contract="WCFLearn.IHomeService" listenUri="net.tcp://127.0.0.1:29300/HomeService">
+          <identity>
+            <dns value="localhost"/>
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexTcpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="net.tcp://127.0.0.1:29200/HomeService" />
+          </baseAddresses>
+        </host>
+      </service>
+      
+    </services>
+  </system.serviceModel>
+</configuration>

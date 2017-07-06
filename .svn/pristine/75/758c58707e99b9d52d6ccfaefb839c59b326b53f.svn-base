@@ -1,0 +1,1 @@
+%~dp0wget.exe -q http://localhost:8080/job/JenKinsLearn/build?delay=0sec

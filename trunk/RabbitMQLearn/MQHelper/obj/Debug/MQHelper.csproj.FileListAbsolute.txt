@@ -1,0 +1,4 @@
+D:\test\RabbitMQLearn\MQHelper\bin\Debug\MQHelper.dll
+D:\test\RabbitMQLearn\MQHelper\bin\Debug\MQHelper.pdb
+D:\test\RabbitMQLearn\MQHelper\obj\Debug\MQHelper.dll
+D:\test\RabbitMQLearn\MQHelper\obj\Debug\MQHelper.pdb

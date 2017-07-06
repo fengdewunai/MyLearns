@@ -1,0 +1,12 @@
+﻿
+namespace WCFLearn
+{
+    using System.ServiceModel;
+
+    [ServiceContract]
+    public interface IHomeService
+    {
+        [OperationContract]
+        string GetLength(string name);
+    }
+}

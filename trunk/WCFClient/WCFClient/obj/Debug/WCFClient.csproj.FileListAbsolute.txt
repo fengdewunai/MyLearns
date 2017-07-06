@@ -1,0 +1,12 @@
+D:\test\WCFClient\WCFClient\bin\Debug\WCFClient.exe.config
+D:\test\WCFClient\WCFClient\bin\Debug\WCFClient.exe
+D:\test\WCFClient\WCFClient\bin\Debug\WCFClient.pdb
+D:\test\WCFClient\WCFClient\obj\Debug\WCFClient.csprojResolveAssemblyReference.cache
+D:\test\WCFClient\WCFClient\obj\Debug\WCFClient.exe
+D:\test\WCFClient\WCFClient\obj\Debug\WCFClient.pdb
+D:\MyLearns\trunk\WCFClient\WCFClient\bin\Debug\WCFClient.exe.config
+D:\MyLearns\trunk\WCFClient\WCFClient\obj\Debug\WCFClient.exe
+D:\MyLearns\trunk\WCFClient\WCFClient\obj\Debug\WCFClient.pdb
+D:\MyLearns\trunk\WCFClient\WCFClient\bin\Debug\WCFClient.exe
+D:\MyLearns\trunk\WCFClient\WCFClient\bin\Debug\WCFClient.pdb
+D:\MyLearns\trunk\WCFClient\WCFClient\obj\Debug\WCFClient.csprojResolveAssemblyReference.cache

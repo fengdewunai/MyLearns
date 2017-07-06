@@ -1,0 +1,16 @@
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\CouchbaseLearn.exe.config
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\CouchbaseLearn.exe
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\CouchbaseLearn.pdb
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.Core.dll
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.dll
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Couchbase.NetClient.dll
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Newtonsoft.Json.dll
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.pdb
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.xml
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.Core.pdb
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Common.Logging.Core.xml
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Couchbase.NetClient.xml
+D:\test\CouchbaseLearn\CouchbaseLearn\bin\Debug\Newtonsoft.Json.xml
+D:\test\CouchbaseLearn\CouchbaseLearn\obj\Debug\CouchbaseLearn.csprojResolveAssemblyReference.cache
+D:\test\CouchbaseLearn\CouchbaseLearn\obj\Debug\CouchbaseLearn.exe
+D:\test\CouchbaseLearn\CouchbaseLearn\obj\Debug\CouchbaseLearn.pdb

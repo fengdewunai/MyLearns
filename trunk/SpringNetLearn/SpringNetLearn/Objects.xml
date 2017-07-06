@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <objects xmlns="http://www.springframework.net"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.net
+        http://www.springframework.net/xsd/spring-objects.xsd">
+    <import resource="ImportObject.xml" />
+    <alias name="dao" alias="commonDao"/>
+    <alias name="dao" alias="DaoB"/>
+    <object id="dao" type="SpringNetLearn.Dao, SpringNetLearn" >
+      <replaced-method name="ReplaceMethod" replacer="replaceMethod">
+          <arg-type match="String"/>
+          <arg-type match="IChild"/>
+      </replaced-method>
+    </object>
+    <object id="dao_child" type="SpringNetLearn.Dao+Child, SpringNetLearn" />
+    <object id="generic" type="SpringNetLearn.GenericClass&lt;int>, SpringNetLearn" />
+    <object id="staticObject" type="SpringNetLearn.StaticObjectsFactory, SpringNetLearn" factory-method="CreateInstance"/>
+    <object id="instanceObjectsFactory" type="SpringNetLearn.InstanceObjectsFactory, SpringNetLearn"/>
+    <object id="instanceObject" factory-method="CreateInstance" factory-object="instanceObjectsFactory"/>
+    <object id="singleton" type="SpringNetLearn.Singleton, SpringNetLearn" singleton="true" />
+    <object id="notSingleton" type="SpringNetLearn.NotSingleton, SpringNetLearn" singleton="false" init-method="Init" destroy-method="Destroy" />
+    <object id="lazyCreate" type="SpringNetLearn.LazyCreate, SpringNetLearn"  lazy-init="true"/>
+    <object id="attributeInject" type="SpringNetLearn.AttributeInject, SpringNetLearn">
+      <property name="Value" value="张三" />
+      <property name="obj" ref="dao" />
+      <property name="nullObj" >
+        <null />
+      </property>
+    </object>
+    <object id="indexObject" type="SpringNetLearn.IndexObject, SpringNetLearn">
+      <property name="[0]" value="ccc"/>
+      <property name="['one']" value="ddd"/>
+    </object>
+    <object id="constructorInject" type="SpringNetLearn.ConstructorInject, SpringNetLearn">
+      <constructor-arg name="Obj" ref="dao"/>
+      <constructor-arg index="1" value="李四"/>
+      <constructor-arg type="int" value="1"/>
+    </object>
+    <object id="collectionInject" type="SpringNetLearn.CollectionInject, SpringNetLearn">
+      <property name="ListObj">
+        <list element-type="object">
+          <value>哈哈哈哈</value>
+          <ref object="dao" />
+          <expression value="date('1856-7-9').Month"></expression>
+        </list>
+      </property>
+      <property name="DicObj">
+        <dictionary key-type="int" value-type="Spring.Expressions.IExpression, Spring.Core">
+          <entry key="1">
+            <value>date('1856-7-9').Month</value>
+          </entry>
+          <entry key="2">
+            <value>DateTime.Today > date('1856-7-9')</value>
+          </entry>
+          <entry key="3">
+            <value>'test'.ToUpper()</value>
+          </entry>
+        </dictionary>
+      </property>
+    </object>
+    <object id="abstractMethod" type="SpringNetLearn.AbstractMethod, SpringNetLearn">
+      <lookup-method name="GetDao"  object="dao"  />
+    </object>
+    <object id="replaceMethod" type="SpringNetLearn.ReplaceMethod, SpringNetLearn"/>
+    
+    <object id="door" type="SpringNetLearn.Door, SpringNetLearn"/>
+    <object id="openDoor1" type="SpringNetLearn.OpenDoor1, SpringNetLearn">
+      <listener event="OpenTheDoor" method="WalkInto">
+        <ref object="door"/>
+      </listener>
+    </object>
+    <object id="openDoor2" type="SpringNetLearn.OpenDoor2, SpringNetLearn">
+      <listener event="OpenTheDoor" method="WalkInto">
+        <ref object="door"/>
+      </listener>
+    </object>
+    
+    <object id="parents" type="SpringNetLearn.Parents, SpringNetLearn">
+      <property name="Name" value="张"/>
+    </object>
+    <object id="children" type="SpringNetLearn.Children, SpringNetLearn" parent="parents"/>
+    
+    <object name="sourceObject" type="SpringNetLearn.ReferenceOther.SourceObject, SpringNetLearn">
+      <property name="Name" value="20"/>
+      <property name="Obj">
+        <object type="SpringNetLearn.ReferenceOther.SourceObject, SpringNetLearn">
+          <property name="Sex" value="男"/>
+        </object>
+      </property>
+    </object>
+    <object name="theSex" type="Spring.Objects.Factory.Config.PropertyRetrievingFactoryObject, Spring.Core">
+      <!--获取非静态属性值方式-->
+      <property name="TargetObject" ref="sourceObject"/>
+      <property name="TargetProperty" value="Obj.Sex"/>
+      <!--获取静态属性值方式-->
+      <!--<property name="StaticProperty" value="SpringNetLearn.ReferenceOther.SourceObject.Name"/>-->
+    </object>
+    <object id="theAge" type="Spring.Objects.Factory.Config.FieldRetrievingFactoryObject, Spring.Core">
+      <property name="TargetObject" ref="sourceObject"/>
+      <property name="TargetField" value="age"/>
+    </object>
+    <object name="targetObject" type="SpringNetLearn.ReferenceOther.TargetObject, SpringNetLearn">
+      <property name="Sex" ref="theSex"/>
+      <property name="age" ref="theAge"/>
+    </object>
+    <object id="force-init" type="Spring.Objects.Factory.Config.MethodInvokingFactoryObject, Spring.Core" lazy-init="true" > 
+      <property name="TargetMethod" value="StaticMethod" /> 
+      <property name="TargetType" value="SpringNetLearn.ReferenceOther.TargetObject, SpringNetLearn" />
+      <property name="NamedArguments">
+        <dictionary>
+          <entry key="s">
+            <value>aaaa</value>
+          </entry>
+        </dictionary>
+      </property>
+    </object>
+    <object id="force-init2" type="Spring.Objects.Factory.Config.MethodInvokingFactoryObject, Spring.Core" lazy-init="true" > 
+      <property name="TargetMethod" value="NotStaticMethod" /> 
+      <property name="TargetObject" ref="targetObject" />
+      <property name="Arguments">
+        <list>
+          <value>王五</value>
+          <list>
+            <value>主管</value>
+            <value>经理</value>
+          </list>
+        </list>
+      </property>
+    </object>
+    <!--静态方法结果注入-->
+    <!--<object name="dependOther" type="SpringNetLearn.ReferenceOther.DependOther, SpringNetLearn" depends-on="force-init" lazy-init="true" />-->
+    <!--非静态方法结果注入-->
+    <object name="dependOther" type="SpringNetLearn.ReferenceOther.DependOther, SpringNetLearn" depends-on="force-init2" lazy-init="true" />
+
+    <object name="dependsOnExoticType" type="SpringNetLearn.CustomConvert.DependsOnExoticType, SpringNetLearn">
+      <property name="exoticType" value="刘某某"/>
+    </object>
+    <object id="customConverterConfigurer" type="Spring.Objects.Factory.Config.CustomConverterConfigurer, Spring.Core">
+      <property name="CustomConverters">
+        <dictionary>
+          <entry key="SpringNetLearn.CustomConvert.ExoticType">
+            <object type="SpringNetLearn.CustomConvert.ExoticTypeConverter"/>
+          </entry>
+        </dictionary>
+      </property>
+    </object>
+    <object id="myObjectPostProcessor" type="SpringNetLearn.Object.MyObjectPostProcessor, SpringNetLearn" />
+    <object id="postInject" type="SpringNetLearn.Object.TestInject, SpringNetLearn" init-method="Init" />
+    <object id="postInjectB" type="SpringNetLearn.Object.TestInjectB, SpringNetLearn" init-method="Init" />
+    
+    <object name="propertyPlaceholderTest" type="SpringNetLearn.Object.PropertyPlaceholderTest, SpringNetLearn"> 
+      <property name="MaxLength" value="${maxResults}"/> 
+      <property name="names" value="${name.string}"/> 
+      <property name="path" value="${JAVA_HOME}"/> 
+    </object>
+    <object name="appConfigPropertyHolder" type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+      <property name="configSections">
+        <value>MaxLengthConfiguration,NameConfiguration</value>
+      </property>
+      <!--value有三个值Fallback、Override、Never-->
+      <property name="EnvironmentVariableMode" value="Fallback"/>
+    </object>
+    <object name="appConfigPropertyOverride" type="Spring.Objects.Factory.Config.PropertyOverrideConfigurer, Spring.Core">
+      <property name="configSections">          
+        <value>SexConfiguration</value>                              
+      </property> 
+    </object>
+  </objects>

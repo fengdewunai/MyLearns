@@ -1,0 +1,9 @@
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\bin\Release\StrEncodeAndDecode.exe.config
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\bin\Release\StrEncodeAndDecode.exe
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\bin\Release\StrEncodeAndDecode.pdb
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\bin\Release\RuanYun.Utility.dll
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\obj\Release\StrEncodeAndDecode.Form1.resources
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\obj\Release\StrEncodeAndDecode.Properties.Resources.resources
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\obj\Release\StrEncodeAndDecode.csproj.GenerateResource.Cache
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\obj\Release\StrEncodeAndDecode.exe
+D:\MyLearns\trunk\StrEncodeAndDecode\StrEncodeAndDecode\obj\Release\StrEncodeAndDecode.pdb

@@ -1,0 +1,10 @@
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMapLearn.exe.config
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMapLearn.exe
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMapLearn.pdb
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMap.dll
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMap.pdb
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\StructureMap.xml
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\obj\Debug\StructureMapLearn.csprojResolveAssemblyReference.cache
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\obj\Debug\StructureMapLearn.exe
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\obj\Debug\StructureMapLearn.pdb
+D:\MyLearns\trunk\StructureMapLearn\StructureMapLearn\bin\Debug\Microsoft.Practices.ServiceLocation.dll

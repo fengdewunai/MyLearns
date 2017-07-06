@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SourceAnalyzer Name="My Documentation Rules">
+  <Description>
+    Rules which verify the content and formatting of code documentation.
+  </Description>
+  <Rules>
+    <Rule Name="AvoidUsingAInClassNames" CheckId="CR0001">
+      <Context>The documentation header is composed of invalid Xml: {0}</Context>
+      <Description>Indicates that a documentation header is composed of invalid Xml and cannot be parsed.</Description>
+    </Rule>
+  </Rules>
+</SourceAnalyzer>

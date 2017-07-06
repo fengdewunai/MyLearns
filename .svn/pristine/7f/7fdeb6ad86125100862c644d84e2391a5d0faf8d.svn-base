@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WCFClient
+{
+    using WCFClient.HomeService;
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var service = new HomeServiceClient();
+            Console.WriteLine(service.GetLength("gaofeng"));
+            Console.Read();
+        }
+    }
+}

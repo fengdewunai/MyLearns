@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F08F9B6-E342-4006-8371-1BAD0912C6EC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpringNetLearn</RootNamespace>
+    <AssemblyName>SpringNetLearn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractMethod.cs" />
+    <Compile Include="AttributeInject.cs" />
+    <Compile Include="Children.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CollectionInject.cs" />
+    <Compile Include="ConstructorInject.cs" />
+    <Compile Include="CustomConvert\DependsOnExoticType.cs" />
+    <Compile Include="CustomConvert\ExoticType.cs" />
+    <Compile Include="CustomConvert\ExoticTypeConverter.cs" />
+    <Compile Include="Dao.cs" />
+    <Compile Include="DaoTypeConvert.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="GenericClass.cs" />
+    <Compile Include="IChild.cs" />
+    <Compile Include="IDao.cs" />
+    <Compile Include="IGenericClass.cs" />
+    <Compile Include="IndexObject.cs" />
+    <Compile Include="InstanceObject.cs" />
+    <Compile Include="InstanceObjectsFactory.cs" />
+    <Compile Include="IWrite.cs" />
+    <Compile Include="LazyCreate.cs" />
+    <Compile Include="NotSingleton.cs" />
+    <Compile Include="Object\MyObjectPostProcessor.cs" />
+    <Compile Include="Object\ObjectFactoryTest.cs" />
+    <Compile Include="Object\PropertyPlaceholderTest.cs" />
+    <Compile Include="Object\TestInject.cs" />
+    <Compile Include="Object\TestInjectB.cs" />
+    <Compile Include="Object\TypeAliasTest.cs" />
+    <Compile Include="OpenDoor1.cs" />
+    <Compile Include="OpenDoor2.cs" />
+    <Compile Include="Parents.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceOther\DependOther.cs" />
+    <Compile Include="ReferenceOther\SourceObject.cs" />
+    <Compile Include="ReferenceOther\TargetObject.cs" />
+    <Compile Include="ReplaceMethod.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SpringServiceLocatorAdapter.cs" />
+    <Compile Include="StaticObject.cs" />
+    <Compile Include="StaticObjectsFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Objects.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChildrenObject.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="ImportObject.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
