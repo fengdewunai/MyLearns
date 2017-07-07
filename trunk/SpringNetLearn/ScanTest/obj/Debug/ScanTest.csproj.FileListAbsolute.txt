@@ -1,0 +1,16 @@
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\ScanTest.exe.config
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\ScanTest.exe
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\ScanTest.pdb
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Spring.Core.dll
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Spring.Core.pdb
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Spring.Core.xml
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\obj\Debug\ScanTest.exe
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\obj\Debug\ScanTest.pdb
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.Core.dll
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.Core.pdb
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.Core.xml
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.dll
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.pdb
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\bin\Debug\Common.Logging.xml
+D:\MyLearns\trunk\SpringNetLearn\ScanTest\obj\Debug\ScanTest.csprojResolveAssemblyReference.cache

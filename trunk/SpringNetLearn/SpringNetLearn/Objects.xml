@@ -103,6 +103,8 @@
       <property name="Sex" ref="theSex"/>
       <property name="age" ref="theAge"/>
     </object>
+    
+    <!--方法结果注入-->
     <object id="force-init" type="Spring.Objects.Factory.Config.MethodInvokingFactoryObject, Spring.Core" lazy-init="true" > 
       <property name="TargetMethod" value="StaticMethod" /> 
       <property name="TargetType" value="SpringNetLearn.ReferenceOther.TargetObject, SpringNetLearn" />
@@ -131,10 +133,8 @@
     <!--<object name="dependOther" type="SpringNetLearn.ReferenceOther.DependOther, SpringNetLearn" depends-on="force-init" lazy-init="true" />-->
     <!--非静态方法结果注入-->
     <object name="dependOther" type="SpringNetLearn.ReferenceOther.DependOther, SpringNetLearn" depends-on="force-init2" lazy-init="true" />
-
-    <object name="dependsOnExoticType" type="SpringNetLearn.CustomConvert.DependsOnExoticType, SpringNetLearn">
-      <property name="exoticType" value="刘某某"/>
-    </object>
+    
+    <!--自定义类型转换器-->
     <object id="customConverterConfigurer" type="Spring.Objects.Factory.Config.CustomConverterConfigurer, Spring.Core">
       <property name="CustomConverters">
         <dictionary>
@@ -144,15 +144,16 @@
         </dictionary>
       </property>
     </object>
+    <object name="dependsOnExoticType" type="SpringNetLearn.CustomConvert.DependsOnExoticType, SpringNetLearn">
+      <property name="exoticType" value="刘某某"/>
+    </object>
+    
+    <!--对象后处理器,使用IObjectPostProcessor接口自定义对象-->
     <object id="myObjectPostProcessor" type="SpringNetLearn.Object.MyObjectPostProcessor, SpringNetLearn" />
     <object id="postInject" type="SpringNetLearn.Object.TestInject, SpringNetLearn" init-method="Init" />
     <object id="postInjectB" type="SpringNetLearn.Object.TestInjectB, SpringNetLearn" init-method="Init" />
     
-    <object name="propertyPlaceholderTest" type="SpringNetLearn.Object.PropertyPlaceholderTest, SpringNetLearn"> 
-      <property name="MaxLength" value="${maxResults}"/> 
-      <property name="names" value="${name.string}"/> 
-      <property name="path" value="${JAVA_HOME}"/> 
-    </object>
+    <!--工厂后处理器，实现了IObjectFactoryPostProcessor接口的类-->
     <object name="appConfigPropertyHolder" type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
       <property name="configSections">
         <value>MaxLengthConfiguration,NameConfiguration</value>
@@ -165,4 +166,10 @@
         <value>SexConfiguration</value>                              
       </property> 
     </object>
+    <object name="propertyPlaceholderTest" type="SpringNetLearn.Object.PropertyPlaceholderTest, SpringNetLearn"> 
+      <property name="MaxLength" value="${maxResults}"/> 
+      <property name="names" value="${name.string}"/> 
+      <property name="path" value="${JAVA_HOME}"/> 
+    </object>
+    
   </objects>

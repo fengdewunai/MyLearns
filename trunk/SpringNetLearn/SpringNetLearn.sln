@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpringNetLearn", "SpringNetLearn\SpringNetLearn.csproj", "{6F08F9B6-E342-4006-8371-1BAD0912C6EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpringNetMvc", "SpringNetMvc\SpringNetMvc.csproj", "{2254FFFC-87E4-443E-B84A-6ED22357F888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanTest", "ScanTest\ScanTest.csproj", "{435513AE-0E34-4B07-9F95-05360DE9915F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{6F08F9B6-E342-4006-8371-1BAD0912C6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F08F9B6-E342-4006-8371-1BAD0912C6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F08F9B6-E342-4006-8371-1BAD0912C6EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2254FFFC-87E4-443E-B84A-6ED22357F888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2254FFFC-87E4-443E-B84A-6ED22357F888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2254FFFC-87E4-443E-B84A-6ED22357F888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2254FFFC-87E4-443E-B84A-6ED22357F888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435513AE-0E34-4B07-9F95-05360DE9915F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435513AE-0E34-4B07-9F95-05360DE9915F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435513AE-0E34-4B07-9F95-05360DE9915F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435513AE-0E34-4B07-9F95-05360DE9915F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
