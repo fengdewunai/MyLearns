@@ -23,7 +23,7 @@ namespace WCFClient
 
             var secondService = new SecondServiceClient();
             Console.WriteLine(secondService.GetStrLength("jiajia"));
-
+            TestChannel();
             Console.Read();
         }
 
