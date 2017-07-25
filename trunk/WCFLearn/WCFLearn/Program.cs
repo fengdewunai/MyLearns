@@ -16,7 +16,11 @@ namespace WCFLearn
             #region 通过配置文件启动服务
 
             ServiceHost host1 = new ServiceHost(typeof(HomeService));
-
+            // 把自定义的IEndPointBehavior插入到终结点中  
+            //foreach (var endpont in host1.Description.Endpoints)
+            //{
+            //    endpont.EndpointBehaviors.Add(new MyEndPointBehavior());
+            //} 
             try
             {
                 host1.Open();
@@ -39,6 +43,19 @@ namespace WCFLearn
             {
                 Console.WriteLine(e.Message);
                 host2.Close();
+            }
+
+            ServiceHost host3 = new ServiceHost(typeof(RestTest));
+            try
+            {
+                host3.Open();
+                Console.WriteLine("IRestTest服务启动");
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                host3.Close();
             }
 
             Console.Read();

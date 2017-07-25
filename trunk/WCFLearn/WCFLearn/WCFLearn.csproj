@@ -51,6 +51,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,10 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarMessage.cs" />
     <Compile Include="DateTest.cs" />
     <Compile Include="HomeService.cs" />
     <Compile Include="IHomeService.cs" />
+    <Compile Include="IRestTest.cs" />
     <Compile Include="ISecondService.cs" />
+    <Compile Include="MyEndPointBehavior.cs" />
+    <Compile Include="MyMessageInspector.cs" />
     <Compile Include="Program.cs">
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
@@ -76,8 +81,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ResponseMessage.cs" />
+    <Compile Include="RestTest.cs" />
     <Compile Include="SecondService.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="TransferFileMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

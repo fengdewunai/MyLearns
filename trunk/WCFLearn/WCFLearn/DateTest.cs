@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace WCFLearn
 {
-    [DataContract(Namespace = "http://tempuri.org/", Name = "Update")]
+    [DataContract(Namespace = "http://tempuri.org/")]
     public class DateTest
     {
         [DataMember]

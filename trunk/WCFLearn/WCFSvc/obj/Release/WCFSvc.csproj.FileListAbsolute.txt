@@ -1,0 +1,5 @@
+D:\MyLearns\trunk\WCFLearn\WCFSvc\bin\WCFSvc.dll
+D:\MyLearns\trunk\WCFLearn\WCFSvc\bin\WCFSvc.pdb
+D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Release\WCFSvc.csprojResolveAssemblyReference.cache
+D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Release\WCFSvc.dll
+D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Release\WCFSvc.pdb
