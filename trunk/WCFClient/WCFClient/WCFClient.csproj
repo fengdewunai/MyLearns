@@ -36,6 +36,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +53,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\SecondService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TCPService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -71,11 +78,30 @@
     <None Include="Service References\HomeService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\HomeService\WCFClient.HomeService.ResponseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HomeService\WCFClient.HomeService.UploadFileWithMessageContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SecondService\service.wsdl" />
     <None Include="Service References\SecondService\service.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\SecondService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCPService\service.wsdl" />
+    <None Include="Service References\TCPService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCPService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TCPService\WCFClient.TCPService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCPService\WCFSvc.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -85,6 +111,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\HomeService\" />
     <WCFMetadataStorage Include="Service References\SecondService\" />
+    <WCFMetadataStorage Include="Service References\TCPService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\HomeService\configuration91.svcinfo" />
@@ -106,6 +133,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SecondService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCPService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCPService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCPService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

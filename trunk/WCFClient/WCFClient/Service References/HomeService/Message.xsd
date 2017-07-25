@@ -5,4 +5,7 @@
       <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="StreamBody">
+    <xs:restriction base="xs:base64Binary" />
+  </xs:simpleType>
 </xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1e4cd273-d47e-4f0f-8c19-a762ff24ec8a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a4ac0634-578a-45b3-b775-06a9231bc0a7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://127.0.0.1:28200/HomeService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="net.tcp://127.0.0.1/Service1.svc/mex/mex/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="dc4ce3e2-423a-421e-8007-df055b293e4c" SourceId="1" SourceUrl="http://127.0.0.1:28200/HomeService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="cc48f6cb-fe1b-4f8d-a7d9-9a69fc6ca8eb" SourceId="1" SourceUrl="http://127.0.0.1:28200/HomeService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c74e84f3-b13f-443e-96ab-b3119e9b863e" SourceId="1" SourceUrl="http://127.0.0.1:28200/HomeService/mex" />
-    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="cad97bad-d9dc-4b8e-9d06-686d8f16204e" SourceId="1" SourceUrl="http://127.0.0.1:28200/HomeService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="42c612b4-6b43-4155-8770-ccc5c29c9ba5" SourceId="1" SourceUrl="net.tcp://127.0.0.1/Service1.svc/mex/mex/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f456367c-bcc9-4cfe-834e-83867cc44399" SourceId="1" SourceUrl="net.tcp://127.0.0.1/Service1.svc/mex/mex/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="debdf8cc-ac65-4a09-b1bf-a43faa6b91b2" SourceId="1" SourceUrl="net.tcp://127.0.0.1/Service1.svc/mex/mex/mex" />
+    <MetadataFile FileName="WCFSvc.xsd" MetadataType="Schema" ID="e927e63f-f986-4dd3-8474-7e1e518312ab" SourceId="1" SourceUrl="net.tcp://127.0.0.1/Service1.svc/mex/mex/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

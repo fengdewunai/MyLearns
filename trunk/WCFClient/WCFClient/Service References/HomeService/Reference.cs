@@ -9,7 +9,54 @@
 //------------------------------------------------------------------------------
 
 namespace WCFClient.HomeService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DateTest", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class DateTest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StrLengthField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StrLength {
+            get {
+                return this.StrLengthField;
+            }
+            set {
+                if ((this.StrLengthField.Equals(value) != true)) {
+                    this.StrLengthField = value;
+                    this.RaisePropertyChanged("StrLength");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="HomeService.IHomeService")]
@@ -21,11 +68,116 @@ namespace WCFClient.HomeService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/GetLength", ReplyAction="http://tempuri.org/IHomeService/GetLengthResponse")]
         System.Threading.Tasks.Task<string> GetLengthAsync(string name);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/GetDataContract", ReplyAction="http://tempuri.org/IHomeService/GetDataContractResponse")]
+        void GetDataContract(WCFClient.HomeService.DateTest dateTest);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/GetDataContract", ReplyAction="http://tempuri.org/IHomeService/GetDataContractResponse")]
+        System.Threading.Tasks.Task GetDataContractAsync(WCFClient.HomeService.DateTest dateTest);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/TestMessage", ReplyAction="http://tempuri.org/IHomeService/TestMessageResponse")]
         System.ServiceModel.Channels.Message TestMessage(System.ServiceModel.Channels.Message request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/TestMessage", ReplyAction="http://tempuri.org/IHomeService/TestMessageResponse")]
         System.Threading.Tasks.Task<System.ServiceModel.Channels.Message> TestMessageAsync(System.ServiceModel.Channels.Message request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/PostMessageContract", ReplyAction="http://tempuri.org/IHomeService/PostMessageContractResponse")]
+        WCFClient.HomeService.ResponseMessage PostMessageContract(WCFClient.HomeService.CarMessage request);
+        
+        // CODEGEN: 正在生成消息协定，应为该操作具有多个返回值。
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/PostMessageContract", ReplyAction="http://tempuri.org/IHomeService/PostMessageContractResponse")]
+        System.Threading.Tasks.Task<WCFClient.HomeService.ResponseMessage> PostMessageContractAsync(WCFClient.HomeService.CarMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/UploadFile", ReplyAction="http://tempuri.org/IHomeService/UploadFileResponse")]
+        void UploadFile(System.IO.Stream fileStream);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/UploadFile", ReplyAction="http://tempuri.org/IHomeService/UploadFileResponse")]
+        System.Threading.Tasks.Task UploadFileAsync(System.IO.Stream fileStream);
+        
+        // CODEGEN: 操作 UploadFileWithMessageContract 以后生成的消息协定不是 RPC，也不是换行文档。
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/UploadFileWithMessageContract", ReplyAction="http://tempuri.org/IHomeService/UploadFileWithMessageContractResponse")]
+        WCFClient.HomeService.UploadFileWithMessageContractResponse UploadFileWithMessageContract(WCFClient.HomeService.TransferFileMessage request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHomeService/UploadFileWithMessageContract", ReplyAction="http://tempuri.org/IHomeService/UploadFileWithMessageContractResponse")]
+        System.Threading.Tasks.Task<WCFClient.HomeService.UploadFileWithMessageContractResponse> UploadFileWithMessageContractAsync(WCFClient.HomeService.TransferFileMessage request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CarMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CarMessage {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public string IP;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public WCFClient.HomeService.DateTest Data;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public int MakeYear;
+        
+        public CarMessage() {
+        }
+        
+        public CarMessage(string IP, WCFClient.HomeService.DateTest Data, int MakeYear) {
+            this.IP = IP;
+            this.Data = Data;
+            this.MakeYear = MakeYear;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ResponseMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class ResponseMessage {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int a;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public int b;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public int c;
+        
+        public ResponseMessage() {
+        }
+        
+        public ResponseMessage(int a, int b, int c) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="TransferFileMessage", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class TransferFileMessage {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public string FileName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.IO.Stream FileStream;
+        
+        public TransferFileMessage() {
+        }
+        
+        public TransferFileMessage(string FileName, System.IO.Stream FileStream) {
+            this.FileName = FileName;
+            this.FileStream = FileStream;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UploadFileWithMessageContractResponse {
+        
+        public UploadFileWithMessageContractResponse() {
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,12 +215,72 @@ namespace WCFClient.HomeService {
             return base.Channel.GetLengthAsync(name);
         }
         
+        public void GetDataContract(WCFClient.HomeService.DateTest dateTest) {
+            base.Channel.GetDataContract(dateTest);
+        }
+        
+        public System.Threading.Tasks.Task GetDataContractAsync(WCFClient.HomeService.DateTest dateTest) {
+            return base.Channel.GetDataContractAsync(dateTest);
+        }
+        
         public System.ServiceModel.Channels.Message TestMessage(System.ServiceModel.Channels.Message request) {
             return base.Channel.TestMessage(request);
         }
         
         public System.Threading.Tasks.Task<System.ServiceModel.Channels.Message> TestMessageAsync(System.ServiceModel.Channels.Message request) {
             return base.Channel.TestMessageAsync(request);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WCFClient.HomeService.ResponseMessage WCFClient.HomeService.IHomeService.PostMessageContract(WCFClient.HomeService.CarMessage request) {
+            return base.Channel.PostMessageContract(request);
+        }
+        
+        public int PostMessageContract(string IP, WCFClient.HomeService.DateTest Data, int MakeYear, out int b, out int c) {
+            WCFClient.HomeService.CarMessage inValue = new WCFClient.HomeService.CarMessage();
+            inValue.IP = IP;
+            inValue.Data = Data;
+            inValue.MakeYear = MakeYear;
+            WCFClient.HomeService.ResponseMessage retVal = ((WCFClient.HomeService.IHomeService)(this)).PostMessageContract(inValue);
+            b = retVal.b;
+            c = retVal.c;
+            return retVal.a;
+        }
+        
+        public System.Threading.Tasks.Task<WCFClient.HomeService.ResponseMessage> PostMessageContractAsync(WCFClient.HomeService.CarMessage request) {
+            return base.Channel.PostMessageContractAsync(request);
+        }
+        
+        public void UploadFile(System.IO.Stream fileStream) {
+            base.Channel.UploadFile(fileStream);
+        }
+        
+        public System.Threading.Tasks.Task UploadFileAsync(System.IO.Stream fileStream) {
+            return base.Channel.UploadFileAsync(fileStream);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WCFClient.HomeService.UploadFileWithMessageContractResponse WCFClient.HomeService.IHomeService.UploadFileWithMessageContract(WCFClient.HomeService.TransferFileMessage request) {
+            return base.Channel.UploadFileWithMessageContract(request);
+        }
+        
+        public void UploadFileWithMessageContract(string FileName, System.IO.Stream FileStream) {
+            WCFClient.HomeService.TransferFileMessage inValue = new WCFClient.HomeService.TransferFileMessage();
+            inValue.FileName = FileName;
+            inValue.FileStream = FileStream;
+            WCFClient.HomeService.UploadFileWithMessageContractResponse retVal = ((WCFClient.HomeService.IHomeService)(this)).UploadFileWithMessageContract(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WCFClient.HomeService.UploadFileWithMessageContractResponse> WCFClient.HomeService.IHomeService.UploadFileWithMessageContractAsync(WCFClient.HomeService.TransferFileMessage request) {
+            return base.Channel.UploadFileWithMessageContractAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WCFClient.HomeService.UploadFileWithMessageContractResponse> UploadFileWithMessageContractAsync(string FileName, System.IO.Stream FileStream) {
+            WCFClient.HomeService.TransferFileMessage inValue = new WCFClient.HomeService.TransferFileMessage();
+            inValue.FileName = FileName;
+            inValue.FileStream = FileStream;
+            return ((WCFClient.HomeService.IHomeService)(this)).UploadFileWithMessageContractAsync(inValue);
         }
     }
 }
