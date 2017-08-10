@@ -12,6 +12,7 @@ namespace WCFClient
     using System.ServiceModel.Channels;
     using System.Threading;
     using System.Web.Script.Serialization;
+    using System.Web.UI;
 
     using WCFClient.HomeService;
     using WCFClient.SecondService;
@@ -120,14 +121,17 @@ namespace WCFClient
 
         public static void TestTCPService()
         {
-            var tcpService = new TCPService.Service1Client();
+            var cb = new MyCallback();
+            cb.ValueCallbacked += (sender,e) => Console.WriteLine("执行回调方法，返回值为{0}", e);  
+            var tcpService = new TCPService.Service1Client(new System.ServiceModel.InstanceContext(cb));
             tcpService.StartSession();
             tcpService.SetData("gao");
             var result = tcpService.GetData() + "," + tcpService.GetData();
             tcpService.SetData("feng");
             result = result + "," + tcpService.GetData();
-            tcpService.EndSession();
             Console.WriteLine("TestTCPService中GetData返回值为{0}",result);
+            tcpService.CallServerOp();
         }
+
     }
 }

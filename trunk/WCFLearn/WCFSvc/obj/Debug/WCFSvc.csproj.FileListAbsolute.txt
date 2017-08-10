@@ -2,3 +2,4 @@ D:\MyLearns\trunk\WCFLearn\WCFSvc\bin\WCFSvc.dll
 D:\MyLearns\trunk\WCFLearn\WCFSvc\bin\WCFSvc.pdb
 D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Debug\WCFSvc.dll
 D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Debug\WCFSvc.pdb
+D:\MyLearns\trunk\WCFLearn\WCFSvc\obj\Debug\WCFSvc.csprojResolveAssemblyReference.cache

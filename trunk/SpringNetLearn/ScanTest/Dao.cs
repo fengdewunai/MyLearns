@@ -13,13 +13,13 @@ namespace ScanTest
     {
         public int Get()
         {
-            Console.WriteLine("已获取到数据");
+            Console.WriteLine("我是Dao，收到调用Get方法请求，已获取到数据");
             return 1;
         }
 
         public void Save()
         {
-            Console.WriteLine("保存成功");
+            Console.WriteLine("我是Dao，收到调用Save方法请求，已保存成功");
         }
     }
 }

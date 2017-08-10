@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/WCFSvc.dll">
-      <publishTime>07/25/2017 16:20:25</publishTime>
+      <publishTime>07/25/2017 17:48:05</publishTime>
     </File>
     <File Include="Service1.svc">
       <publishTime>07/08/2017 11:35:05</publishTime>
@@ -20,7 +20,7 @@
       <publishTime>07/08/2017 11:36:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/25/2017 16:20:25</publishTime>
+      <publishTime>07/25/2017 17:48:05</publishTime>
     </File>
   </ItemGroup>
 </Project>

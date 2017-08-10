@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCallback.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\HomeService\Reference.cs">
@@ -91,17 +92,17 @@
     <None Include="Service References\SecondService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TCPService\service.wsdl" />
-    <None Include="Service References\TCPService\service.xsd">
+    <None Include="Service References\TCPService\service1.wsdl" />
+    <None Include="Service References\TCPService\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\TCPService\service1.xsd">
+    <None Include="Service References\TCPService\service21.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\TCPService\WCFClient.TCPService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\TCPService\WCFSvc.xsd">
+    <None Include="Service References\TCPService\WCFSvc1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

@@ -1,0 +1,11 @@
+D:\MyLearns\trunk\GDILearn\GDILearn\bin\Debug\GDILearn.exe.config
+D:\MyLearns\trunk\GDILearn\GDILearn\bin\Debug\GDILearn.exe
+D:\MyLearns\trunk\GDILearn\GDILearn\bin\Debug\GDILearn.pdb
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.csprojResolveAssemblyReference.cache
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.Form1.resources
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.Properties.Resources.resources
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.csproj.GenerateResource.Cache
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.exe
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.pdb
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.Form2.resources
+D:\MyLearns\trunk\GDILearn\GDILearn\obj\Debug\GDILearn.Resource1.resources

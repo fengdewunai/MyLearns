@@ -31,7 +31,7 @@ namespace SpringNetLearn
             //var dao = ctx.GetObject("dao") as IDao;
             var dao = ServiceLocator.Current.GetInstance<IDao>();
             //嵌套类注入
-            //var child = ctx.GetObject("dao_child") as IChild;
+            var child = ctx.GetObject("dao_child") as IChild;
             ////泛型注入
             //var generic = ctx.GetObject("generic") as IGenericClass;
             ////静态工厂
@@ -70,10 +70,10 @@ namespace SpringNetLearn
             //var typeAlias = ctx.GetObject("typeAlias") as IWrite;
             
 
-            TestSingleton(ctx);
+            //TestSingleton(ctx);
 
             dao.write();
-            //child.Write();
+            child.Write();
             //generic.Write();
             //staticObject.Write();
             //instanceObject.Write();

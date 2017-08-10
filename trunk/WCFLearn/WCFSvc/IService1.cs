@@ -9,7 +9,7 @@ using System.Text;
 namespace WCFSvc
 {
     // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的接口名“IService1”。
-    [ServiceContract(SessionMode = SessionMode.Required)]
+    [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof(ICallback))]
     public interface IService1
     {
         [OperationContract(IsOneWay = true,IsInitiating = false)]
@@ -21,8 +21,16 @@ namespace WCFSvc
         [OperationContract(IsInitiating = true)]
         void StartSession();
 
-        [OperationContract(IsTerminating = true)]
+        [OperationContract(IsOneWay = true, /* 使用回调，必须为OneWay */
+            IsTerminating = true, /* 该操作标识会话终止 */
+            IsInitiating = false)]
         void EndSession();
+
+        // 会话从调用该操作启动  
+        [OperationContract(IsOneWay = true, /* 必须 */
+            IsInitiating = true, /* 启动会话 */
+            IsTerminating = false)]
+        void CallServerOp();  
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

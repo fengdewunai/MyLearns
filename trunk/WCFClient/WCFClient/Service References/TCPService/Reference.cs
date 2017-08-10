@@ -75,7 +75,7 @@ namespace WCFClient.TCPService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TCPService.IService1", SessionMode=System.ServiceModel.SessionMode.Required)]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TCPService.IService1", CallbackContract=typeof(WCFClient.TCPService.IService1Callback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsInitiating=false, Action="http://tempuri.org/IService1/SetData")]
@@ -96,11 +96,17 @@ namespace WCFClient.TCPService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/StartSession", ReplyAction="http://tempuri.org/IService1/StartSessionResponse")]
         System.Threading.Tasks.Task StartSessionAsync();
         
-        [System.ServiceModel.OperationContractAttribute(IsTerminating=true, Action="http://tempuri.org/IService1/EndSession", ReplyAction="http://tempuri.org/IService1/EndSessionResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsTerminating=true, IsInitiating=false, Action="http://tempuri.org/IService1/EndSession")]
         void EndSession();
         
-        [System.ServiceModel.OperationContractAttribute(IsTerminating=true, Action="http://tempuri.org/IService1/EndSession", ReplyAction="http://tempuri.org/IService1/EndSessionResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, IsTerminating=true, IsInitiating=false, Action="http://tempuri.org/IService1/EndSession")]
         System.Threading.Tasks.Task EndSessionAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/CallServerOp")]
+        void CallServerOp();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/CallServerOp")]
+        System.Threading.Tasks.Task CallServerOpAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         WCFClient.TCPService.CompositeType GetDataUsingDataContract(WCFClient.TCPService.CompositeType composite);
@@ -110,30 +116,38 @@ namespace WCFClient.TCPService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IService1Callback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/CallClient")]
+        void CallClient(int v);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IService1Channel : WCFClient.TCPService.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<WCFClient.TCPService.IService1>, WCFClient.TCPService.IService1 {
+    public partial class Service1Client : System.ServiceModel.DuplexClientBase<WCFClient.TCPService.IService1>, WCFClient.TCPService.IService1 {
         
-        public Service1Client() {
+        public Service1Client(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
         public void SetData(string value) {
@@ -166,6 +180,14 @@ namespace WCFClient.TCPService {
         
         public System.Threading.Tasks.Task EndSessionAsync() {
             return base.Channel.EndSessionAsync();
+        }
+        
+        public void CallServerOp() {
+            base.Channel.CallServerOp();
+        }
+        
+        public System.Threading.Tasks.Task CallServerOpAsync() {
+            return base.Channel.CallServerOpAsync();
         }
         
         public WCFClient.TCPService.CompositeType GetDataUsingDataContract(WCFClient.TCPService.CompositeType composite) {
